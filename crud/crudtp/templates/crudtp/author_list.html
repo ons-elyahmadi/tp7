@@ -1,0 +1,12 @@
+<!-- crudtp/templates/crudtp/author_list.html -->
+<h1>Liste des Auteurs</h1>
+<a href="{% url 'crudtp:author_create' %}">Créer un nouvel auteur</a>
+<ul>
+    {% for author in authors %}
+        <li>
+            {{ author.user.username }} - {{ author.bio }}
+            - <a href="{% url 'crudtp:author_update' author.pk %}">Modifier</a>
+            - <a href="{% url 'crudtp:author_delete' author.pk %}">Supprimer</a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,8 @@
+<!-- crudtp/templates/crudtp/author_delete.html -->
+<h1>Supprimer l'Auteur</h1>
+<p>Êtes-vous sûr de vouloir supprimer "{{ object.user.username }}" ?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Oui, supprimer</button>
+    <a href="{% url 'crudtp:author_list' %}">Annuler</a>
+</form>

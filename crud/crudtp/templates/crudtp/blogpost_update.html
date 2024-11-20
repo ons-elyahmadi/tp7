@@ -1,0 +1,8 @@
+<!-- crudtp/templates/crudtp/blogpost_update.html -->
+<h1>Modifier l'Article de Blog</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enregistrer les modifications</button>
+</form>
+<a href="{% url 'crudtp:blogpost_list' %}">Retour à la liste des articles</a>

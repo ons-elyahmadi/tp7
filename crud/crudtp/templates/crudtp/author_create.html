@@ -1,0 +1,8 @@
+<!-- crudtp/templates/crudtp/author_create.html -->
+<h1>Créer un Auteur</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enregistrer</button>
+</form>
+<a href="{% url 'crudtp:author_list' %}">Retour à la liste des auteurs</a>

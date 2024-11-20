@@ -1,0 +1,12 @@
+<!-- crudtp/templates/crudtp/blogpost_list.html -->
+<h1>Liste des Articles de Blog</h1>
+<a href="{% url 'crudtp:blogpost_create' %}">Créer un nouvel article</a>
+<ul>
+    {% for post in posts %}
+        <li>
+            {{ post.title }} - Auteur : {{ post.author.user.username }}
+            - <a href="{% url 'crudtp:blogpost_update' post.pk %}">Modifier</a>
+            - <a href="{% url 'crudtp:blogpost_delete' post.pk %}">Supprimer</a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,7 @@
+<h1>Créer un Article de Blog</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enregistrer</button>
+</form>
+<a href="{% url 'crudtp:blogpost_list' %}">Retour à la liste des articles</a>

@@ -1,0 +1,8 @@
+<!-- crudtp/templates/crudtp/blogpost_delete.html -->
+<h1>Supprimer l'Article de Blog</h1>
+<p>Êtes-vous sûr de vouloir supprimer "{{ object.title }}" ?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Oui, supprimer</button>
+    <a href="{% url 'crudtp:blogpost_list' %}">Annuler</a>
+</form>
